@@ -1,0 +1,144 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #e7e7e5;
+  color: #fff;
+  font-family: Avenir, Calibri, sans-serif;
+}
+
+#lampung-map {
+   padding-top: 15px;
+   margin-left: -25px;
+}
+
+#lampung-map g {
+  -webkit-transition: .3s;
+  transition: .3s;
+  margin-left: -25px;
+}
+
+#lampung-map g:hover {
+  cursor: pointer;
+  margin-left: -25px;
+}
+
+.active, .active:hover {
+  fill: #854442 !important;
+  margin-left: -25px;
+}
+
+#provinceInfo {
+  position: absolute;
+  top: 3%;
+  right: 4%;
+  width: 42%;
+  background: rgba(0, 0, 0, 0.2);
+  pointer-events: none;
+  opacity: 0;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+#provinceInfo.show {
+  opacity: 1;
+}
+
+#provinceInfo h1 {
+  background: #2e2e9e;
+  padding: .3rem;
+  padding-left: 1rem;
+  margin-top: -.5rem;
+  font-weight: 400;
+}
+
+#provinceInfo p {
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+#provinceInfo img {
+  width: 100%;
+  max-height: 380px;
+}
+
+@media all and (max-width: 800px) {
+  #lampung-map {
+    margin-top: 25%;
+  }
+  #provinceInfo {
+    width: 40%;
+  }
+  
+}
+@media all and (max-width: 650px) {
+  #lampung-map {
+    margin-left: 20%;
+    margin-top: 2%;
+  }
+  #provinceInfo {
+    width: 70%;
+     position: static; 
+    margin-left: 15%;
+    margin-top: 10px;
+  }
+
+  #provinceInfo.show p {
+    color: #fff !important;
+    margin-bottom: 2rem;
+    padding-bottom: 5%;
+  }
+  #provinceInfo h1 {
+    font-size: 26px;
+  }
+  #provinceInfo img {
+    width: 100%;
+    max-height: 320px;
+  }
+}
+@media all and (max-width: 450px) {  
+  #provinceInfo {
+    margin-top: 10px;
+  }
+  #provinceInfo.show p {
+    font-size: 14px;
+    padding-bottom: 5%;
+  }
+  #provinceInfo h1 {
+    font-size: 20px;
+  }
+}
+
+.wrap {
+  position: fixed;
+  z-index: 99;
+  bottom: -5px;
+  right: 10px;
+  margin-top: -86px;
+  text-align: center;
+}
+
+.wrap a {
+  -webkit-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+  -moz-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+  -ms-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+  -o-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+  transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+  display: block;
+  margin: 20px auto;
+  max-width: 80px;
+  text-decoration: none;
+  border-radius: 4px;
+  padding: 15px 15px;
+}
+
+.wrap a.button {
+  color: rgba(30, 22, 54, 0.6);
+  box-shadow: rgba(30, 22, 54, 0.4) 0 0px 0px 2px inset;
+}
+
+.wrap a.button:hover {
+  color: rgba(255, 255, 255, 0.85);
+  box-shadow: rgba(30, 22, 54, 0.7) 0 0px 0px 40px inset;
+}
